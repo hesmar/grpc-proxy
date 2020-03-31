@@ -1,6 +1,6 @@
 # connector
 --
-    import "github.com/vgough/grpc-proxy/connector"
+    import "github.com/hesmar/grpc-proxy/connector"
 
 Package connector provides connection management strategies for gRPC proxies.
 

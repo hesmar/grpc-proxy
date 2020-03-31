@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package vgough.testproto;
+package hesmar.testproto;
 
 message Empty {
 }

@@ -1,8 +1,8 @@
 # gRPC Proxy
 
-[![Travis Build](https://travis-ci.org/vgough/grpc-proxy.svg?branch=master)](https://travis-ci.org/vgough/grpc-proxy)
-[![Go Report Card](https://goreportcard.com/badge/github.com/vgough/grpc-proxy)](https://goreportcard.com/report/github.com/vgough/grpc-proxy)
-[![GoDoc](http://img.shields.io/badge/GoDoc-Reference-blue.svg)](https://godoc.org/github.com/vgough/grpc-proxy)
+[![Travis Build](https://travis-ci.org/hesmar/grpc-proxy.svg?branch=master)](https://travis-ci.org/hesmar/grpc-proxy)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hesmar/grpc-proxy)](https://goreportcard.com/report/github.com/hesmar/grpc-proxy)
+[![GoDoc](http://img.shields.io/badge/GoDoc-Reference-blue.svg)](https://godoc.org/github.com/hesmar/grpc-proxy)
 [![Apache 2.0 License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 [gRPC Go](https://github.com/grpc/grpc-go) Proxy server

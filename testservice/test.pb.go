@@ -2,7 +2,7 @@
 // source: test.proto
 
 /*
-	Package vgough_testproto is a generated protocol buffer package.
+	Package hesmar_testproto is a generated protocol buffer package.
 
 	It is generated from these files:
 		test.proto
@@ -12,19 +12,25 @@
 		PingRequest
 		PingResponse
 */
-package vgough_testproto
+package hesmar_testproto
 
-import proto "github.com/gogo/protobuf/proto"
-import fmt "fmt"
-import math "math"
+import (
+	fmt "fmt"
 
-import strings "strings"
-import reflect "reflect"
+	proto "github.com/gogo/protobuf/proto"
 
-import context "golang.org/x/net/context"
-import grpc "google.golang.org/grpc"
+	math "math"
 
-import io "io"
+	strings "strings"
+
+	reflect "reflect"
+
+	context "golang.org/x/net/context"
+
+	grpc "google.golang.org/grpc"
+
+	io "io"
+)
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
@@ -83,9 +89,9 @@ func (m *PingResponse) GetCounter() int32 {
 }
 
 func init() {
-	proto.RegisterType((*Empty)(nil), "vgough.testproto.Empty")
-	proto.RegisterType((*PingRequest)(nil), "vgough.testproto.PingRequest")
-	proto.RegisterType((*PingResponse)(nil), "vgough.testproto.PingResponse")
+	proto.RegisterType((*Empty)(nil), "hesmar.testproto.Empty")
+	proto.RegisterType((*PingRequest)(nil), "hesmar.testproto.PingRequest")
+	proto.RegisterType((*PingResponse)(nil), "hesmar.testproto.PingResponse")
 }
 func (this *Empty) Equal(that interface{}) bool {
 	if that == nil {
@@ -164,7 +170,7 @@ func (this *Empty) GoString() string {
 		return "nil"
 	}
 	s := make([]string, 0, 4)
-	s = append(s, "&vgough_testproto.Empty{")
+	s = append(s, "&hesmar_testproto.Empty{")
 	s = append(s, "}")
 	return strings.Join(s, "")
 }
@@ -173,7 +179,7 @@ func (this *PingRequest) GoString() string {
 		return "nil"
 	}
 	s := make([]string, 0, 5)
-	s = append(s, "&vgough_testproto.PingRequest{")
+	s = append(s, "&hesmar_testproto.PingRequest{")
 	s = append(s, "Value: "+fmt.Sprintf("%#v", this.Value)+",\n")
 	s = append(s, "}")
 	return strings.Join(s, "")
@@ -183,7 +189,7 @@ func (this *PingResponse) GoString() string {
 		return "nil"
 	}
 	s := make([]string, 0, 6)
-	s = append(s, "&vgough_testproto.PingResponse{")
+	s = append(s, "&hesmar_testproto.PingResponse{")
 	s = append(s, "Value: "+fmt.Sprintf("%#v", this.Value)+",\n")
 	s = append(s, "Counter: "+fmt.Sprintf("%#v", this.Counter)+",\n")
 	s = append(s, "}")
@@ -226,7 +232,7 @@ func NewTestServiceClient(cc *grpc.ClientConn) TestServiceClient {
 
 func (c *testServiceClient) PingEmpty(ctx context.Context, in *Empty, opts ...grpc.CallOption) (*PingResponse, error) {
 	out := new(PingResponse)
-	err := grpc.Invoke(ctx, "/vgough.testproto.TestService/PingEmpty", in, out, c.cc, opts...)
+	err := grpc.Invoke(ctx, "/hesmar.testproto.TestService/PingEmpty", in, out, c.cc, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -235,7 +241,7 @@ func (c *testServiceClient) PingEmpty(ctx context.Context, in *Empty, opts ...gr
 
 func (c *testServiceClient) Ping(ctx context.Context, in *PingRequest, opts ...grpc.CallOption) (*PingResponse, error) {
 	out := new(PingResponse)
-	err := grpc.Invoke(ctx, "/vgough.testproto.TestService/Ping", in, out, c.cc, opts...)
+	err := grpc.Invoke(ctx, "/hesmar.testproto.TestService/Ping", in, out, c.cc, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -244,7 +250,7 @@ func (c *testServiceClient) Ping(ctx context.Context, in *PingRequest, opts ...g
 
 func (c *testServiceClient) PingError(ctx context.Context, in *PingRequest, opts ...grpc.CallOption) (*Empty, error) {
 	out := new(Empty)
-	err := grpc.Invoke(ctx, "/vgough.testproto.TestService/PingError", in, out, c.cc, opts...)
+	err := grpc.Invoke(ctx, "/hesmar.testproto.TestService/PingError", in, out, c.cc, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -252,7 +258,7 @@ func (c *testServiceClient) PingError(ctx context.Context, in *PingRequest, opts
 }
 
 func (c *testServiceClient) PingList(ctx context.Context, in *PingRequest, opts ...grpc.CallOption) (TestService_PingListClient, error) {
-	stream, err := grpc.NewClientStream(ctx, &_TestService_serviceDesc.Streams[0], c.cc, "/vgough.testproto.TestService/PingList", opts...)
+	stream, err := grpc.NewClientStream(ctx, &_TestService_serviceDesc.Streams[0], c.cc, "/hesmar.testproto.TestService/PingList", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -284,7 +290,7 @@ func (x *testServicePingListClient) Recv() (*PingResponse, error) {
 }
 
 func (c *testServiceClient) PingStream(ctx context.Context, opts ...grpc.CallOption) (TestService_PingStreamClient, error) {
-	stream, err := grpc.NewClientStream(ctx, &_TestService_serviceDesc.Streams[1], c.cc, "/vgough.testproto.TestService/PingStream", opts...)
+	stream, err := grpc.NewClientStream(ctx, &_TestService_serviceDesc.Streams[1], c.cc, "/hesmar.testproto.TestService/PingStream", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -338,7 +344,7 @@ func _TestService_PingEmpty_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/vgough.testproto.TestService/PingEmpty",
+		FullMethod: "/hesmar.testproto.TestService/PingEmpty",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TestServiceServer).PingEmpty(ctx, req.(*Empty))
@@ -356,7 +362,7 @@ func _TestService_Ping_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/vgough.testproto.TestService/Ping",
+		FullMethod: "/hesmar.testproto.TestService/Ping",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TestServiceServer).Ping(ctx, req.(*PingRequest))
@@ -374,7 +380,7 @@ func _TestService_PingError_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/vgough.testproto.TestService/PingError",
+		FullMethod: "/hesmar.testproto.TestService/PingError",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TestServiceServer).PingError(ctx, req.(*PingRequest))
@@ -430,7 +436,7 @@ func (x *testServicePingStreamServer) Recv() (*PingRequest, error) {
 }
 
 var _TestService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "vgough.testproto.TestService",
+	ServiceName: "hesmar.testproto.TestService",
 	HandlerType: (*TestServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

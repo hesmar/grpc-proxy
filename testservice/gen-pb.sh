@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-: ${IMG:=vgough/protoc-go:go1.10-proto351}
+: ${IMG:=hesmar/protoc-go:go1.10-proto351}
 : ${DIRECT:=false} # Don't set unless running in a container.
 : ${DEBUG:=false} # Set true to see command lines.
 : ${CMD:=/build/gen-pb.sh}
