@@ -31,7 +31,7 @@ type rawCodec struct {
 var _ grpc.Codec = &rawCodec{}
 
 type frame struct {
-	payload []byte
+	payload []byte `protobuf:"bytes,1,req,name=payload`
 }
 
 // implement proto.Message interface
